@@ -3,7 +3,7 @@ exec 1>>cyberark_setup/apply-policy.log 2>&1
 
 export CYBERARK_NAMESPACE_NAME=$1
 export DAP_ADMIN_PASSWORD=$2
-export CYBERARK_SETUP_DIR=$3
+export CYBERARK_SETUP_DIR=$4
 export CONJUR_AUTHN_LOGIN=admin
 export CONJUR_AUTHN_API_KEY=$DAP_ADMIN_PASSWORD
 

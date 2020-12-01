@@ -1,12 +1,13 @@
 #!/bin/bash
 exec 1>>cyberark_setup/apply-policy.log 2>&1
 
-cd cyberark_setup
-
 export CYBERARK_NAMESPACE_NAME=$1
 export DAP_ADMIN_PASSWORD=$2
+export CYBERARK_SETUP_DIR=$3
 export CONJUR_AUTHN_LOGIN=admin
 export CONJUR_AUTHN_API_KEY=$DAP_ADMIN_PASSWORD
+
+cd cyberark_setup/${CYBERARK_SETUP_DIR}
 
 source ./dap_service_rhpds.config
 source ./conjur_utils.sh

@@ -5,10 +5,11 @@ exec 1>cyberark_setup/master-deploy.log 2>&1
 # A worker node is selected to host the Primary and pinned to it using a nodeSelector.
 # This greatly simplifies lab setup by making each lab cluster self-contained.
 
-cd cyberark_setup
-
 export CYBERARK_NAMESPACE_NAME=$1
 export DAP_ADMIN_PASSWORD=$2
+export CYBERARK_SETUP_DIR=$3
+
+cd cyberark_setup/${CYBERARK_SETUP_DIR}
 
 source ./dap_service_rhpds.config
 

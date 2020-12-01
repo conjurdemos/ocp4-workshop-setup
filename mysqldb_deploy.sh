@@ -1,9 +1,10 @@
 #!/bin/bash
 exec 1>cyberark_setup/mysqldb_deploy.log 2>&1
 
-cd cyberark_setup
-
 export CYBERARK_NAMESPACE_NAME=$1
+export CYBERARK_SETUP_DIR=$2
+
+cd cyberark_setup/${CYBERARK_SETUP_DIR}
 
 source dap_service_rhpds.config
 

@@ -55,14 +55,6 @@ spec:
           fieldRef:
             fieldPath: metadata.namespace
 
-    resources:
-      requests:
-        cpu: "250m"
-        memory: "300Mi"
-      limits:
-        cpu: "250m"
-        memory: "300Mi"
-
     volumeMounts:
       - mountPath: /run/conjur
         name: conjur-access-token
@@ -119,14 +111,6 @@ spec:
         valueFrom:
           fieldRef:
             fieldPath: status.podIP
-
-    resources:
-      requests:
-        cpu: "50m"
-        memory: "16Mi"
-      limits:
-        cpu: "50m"
-        memory: "16Mi"
 
     volumeMounts:
       - mountPath: /run/conjur
